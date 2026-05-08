@@ -19,7 +19,7 @@ services:
 
   backend:
     build:
-      context: ./sistema_de_recompensas_backend
+      context: ../sistema_de_recompensas_backend
     container_name: sistema_recompensas_backend
     environment:
       PORT: 3000
@@ -41,7 +41,7 @@ services:
 
   frontend:
     build:
-      context: ./frontend
+      context: ../frontend
     container_name: sistema_recompensas_frontend
     environment:
       FRONTEND_PORT: 5173
@@ -53,7 +53,7 @@ services:
 
   tests:
     build:
-      context: ./Sistema_recompensas_pruebas_automatizadas
+      context: ../Sistema_recompensas_pruebas_automatizadas
     container_name: sistema_recompensas_tests
     environment:
       API_BASE_URL: http://backend:3000
